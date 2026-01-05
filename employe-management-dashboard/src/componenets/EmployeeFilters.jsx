@@ -1,3 +1,4 @@
+import '../styles/employeeFilters.css'
 const EmployeeFilters = ({ onFilter }) => {
   return (
     <div className="filters">

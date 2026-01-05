@@ -1,0 +1,125 @@
+/* =========================
+   Employee Form Container
+========================= */
+
+form {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   Form Heading
+========================= */
+
+form h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* =========================
+   Inputs and Selects
+========================= */
+
+input[type="text"],
+input[type="date"],
+select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* =========================
+   File Input & Image Preview
+========================= */
+
+input[type="file"] {
+  padding: 6px;
+}
+
+form img {
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* =========================
+   Checkbox
+========================= */
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+/* =========================
+   Submit Button
+========================= */
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   Responsive Form
+========================= */
+
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}

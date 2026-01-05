@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useReactToPrint } from "react-to-print"
+import "../styles/employeeTable.css";
 
 // Printable component
 const EmployeePrint = React.forwardRef(({ employee }, ref) => {

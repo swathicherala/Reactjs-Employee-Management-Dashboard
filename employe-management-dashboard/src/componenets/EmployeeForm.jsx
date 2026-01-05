@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import '../styles/employeeForm.css'
 const states = ["Telangana", "Karnataka", "Tamil Nadu", "Maharashtra"];
 
 const EmployeeForm = ({ onSave, editingEmployee }) => {

@@ -1,3 +1,4 @@
+import '../styles/dashboardSummary.css'
 
 const DashboardSummary = ({ employees }) => {
   const total = employees.length;

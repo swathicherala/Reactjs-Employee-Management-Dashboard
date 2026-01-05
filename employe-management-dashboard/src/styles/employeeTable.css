@@ -1,0 +1,174 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+thead {
+  background-color: #f3f4f6;
+}
+
+th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: middle;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+td img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.status-active {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status-inactive {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.table-actions button {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Edit */
+.edit-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Delete */
+.delete-btn {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Print */
+.print-btn {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+.print-btn:hover {
+  background-color: #4b5563;
+}
+
+/* Button click effect */
+.table-actions button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   Print Styles
+========================= */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-user, .print-user * {
+    visibility: visible;
+    font-family: Arial, sans-serif;
+  }
+
+  .print-user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .print-user img {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .print-user p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .print-user strong {
+    color: #2563eb;
+  }
+
+  /* Optional: page breaks */
+  table {
+    page-break-inside: auto;
+  }
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+}
+
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 12px;
+  }
+}
